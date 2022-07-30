@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "League Spartan", sans-serif;
+  }
+
+  :root {
+    --clr-primary: #9e7f66;
+    --clr-neutral-800: #111111;
+    --clr-neutral-750: #17192b;
+    --clr-neutral-500: #242b37;
+    --clr-neutral-300: #5c6779;
+    --clr-neutral-100: #11111180;
+    --clr-neutral-50: #fff;
+    --clr-danger: #b54949;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto;
+    max-width: 94%;
+  }
+
+  @media screen(sm) {
+    .container {
+      max-width: 87.2%;
+    }
+  }
+
+  @media screen(md) {
+    .container {
+      max-width: min(48rem, 89.7135417%);
+    }
+  }
+
+  @media screen(xl) {
+    .container {
+      max-width: 69.375rem;
+    }
+  }
+}
+
+@layer components {
+  .heading-xl {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.4px;
+  }
+
+  .heading-md {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.4px;
+  }
+
+  .heading-sm {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+  }
+
+  .body-xl {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  .body-md {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  @media screen(md) {
+    .heading-xl {
+      font-size: 3rem;
+      line-height: 4rem;
+      letter-spacing: -0.6px;
+    }
+
+    .heading-md {
+      font-size: 3rem;
+      line-height: 3rem;
+      letter-spacing: -0.5px;
+    }
+
+    .body-xl {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+
+  @media screen(xl) {
+    .heading-xl {
+      font-size: 5rem;
+      line-height: 5rem;
+      letter-spacing: -1px;
+    }
+  }
+}
