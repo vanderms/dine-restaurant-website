@@ -1,1 +1,19 @@
-<p>call-to-action-section works!</p>
+<section [attr.aria-labelledby]="titleId" class="mt-[7.75rem] relative xl:mt-[10rem]">
+  <picture>
+    <source media="(min-width: 75rem)" [srcset]="getSrcset('desktop')">
+    <source media="(min-width: 45rem)" [srcset]="getSrcset('tablet')">
+    <img alt="" [srcset]="getSrcset('mobile')"
+      class="absolute top-0 w-full h-full left-0 object-center object-cover">
+  </picture>
+  <div
+    class="relative z-10 container py-[5.5rem] flex flex-col items-center gap-5 xl:flex-row xl:justify-between">
+    <h2 [id]="titleId" class="heading-md text-neutral-50 text-center">Ready to make a
+      reservation?</h2>
+    <div class="w-full max-w-[15.3125rem] mx-auto xl:mx-0">
+      <app-button-wrapper type="transparent">
+        <a routerLink="/booking">BOOK A TABLE</a>
+      </app-button-wrapper>
+    </div>
+
+  </div>
+</section>
