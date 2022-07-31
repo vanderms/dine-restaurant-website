@@ -7,6 +7,10 @@
     font-family: "League Spartan", sans-serif;
   }
 
+  address {
+    font-style: normal;
+  }
+
   :root {
     --clr-primary: #9e7f66;
     --clr-neutral-800: #111111;
