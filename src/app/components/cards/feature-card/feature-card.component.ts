@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FeatureCardComponent implements OnInit {
   @Input() image: string = '';
+  @Input() invert: boolean = false;
 
   constructor() {}
 

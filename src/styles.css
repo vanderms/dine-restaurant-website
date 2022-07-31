@@ -105,3 +105,41 @@
     }
   }
 }
+
+@layer components {
+  .background-pattern {
+    display: block;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .pattern-xl {
+    @apply background-pattern;
+    width: 55.9375rem;
+    height: 20rem;
+  }
+
+  .pattern-sm {
+    @apply background-pattern;
+    width: 10rem;
+    height: 4.75rem;
+    background-image: url("assets/patterns/pattern-lines.svg");
+  }
+
+  .pattern-xl-top-right {
+    @apply pattern-xl;
+    background-image: url("assets/patterns/pattern-curve-top-right.svg");
+  }
+
+  .pattern-xl-top-left {
+    @apply pattern-xl;
+    background-image: url("assets/patterns/pattern-curve-top-left.svg");
+  }
+
+  .pattern-xl-bottom-right {
+    @apply pattern-xl;
+    background-image: url("assets/patterns/pattern-curve-bottom-right.svg");
+  }
+}
