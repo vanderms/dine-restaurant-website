@@ -13,6 +13,7 @@ import { OurMenuSectionComponent } from './components/sections/our-menu-section/
 import { EventsSectionComponent } from './components/sections/events-section/events-section.component';
 import { CallToActionSectionComponent } from './components/sections/call-to-action-section/call-to-action-section.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
+import { MenuCardComponent } from './components/cards/menu-card/menu-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
     EventsSectionComponent,
     CallToActionSectionComponent,
     FooterComponent,
+    MenuCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

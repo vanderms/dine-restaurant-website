@@ -1,0 +1,18 @@
+<article class="grid grid-cols-1 gap-9 
+  md:max-w-[35.8125rem] md:grid-cols-[10rem,1fr] md:gap-[1.875rem]">
+  <div class="relative">
+    <div class='absolute w-8 h-0 border-b border-primary top-[1.125rem] right-0'></div>
+    <picture>
+      <source media="(min-width: 45rem)" [srcset]="getSrcset('desktop-tablet')">
+      <img alt="thumbnail" [srcset]="getSrcset('mobile')">
+    </picture>
+  </div>
+  <header class="text-center md:text-left md:h-max">
+    <div class="heading-sm">
+      <ng-content select="[title]"></ng-content>
+    </div>
+    <div class="mt-1.5 body-md">
+      <ng-content></ng-content>
+    </div>
+  </header>
+</article>
