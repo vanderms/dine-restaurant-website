@@ -30,10 +30,10 @@
     ">
       <h2 [id]="titleId" class="heading-md text-neutral-500 text-center xl:text-left">{{
         events[current].title }}</h2>
-      <p class='mt-4 body-xl text-neutral-500 text-center xl:text-left xl:mt-[1.1875rem]'>{{
+      <p class='mt-4 body-xl text-neutral-500 text-center xl:text-left xl:mt-[1.1875rem] xl:min-h-[8.125rem]'>{{
         events[current].description
         }}</p>
-      <div class="mt-7 w-[15.3125rem] mx-auto md:mt-14 xl:mx-0 xl:mt-20">
+      <div class="mt-7 w-[15.3125rem] mx-auto md:mt-14 xl:mx-0 xl:mt-10">
         <app-button-wrapper type='dark'>
           <a routerLink="/booking">BOOK A TABLE</a>
         </app-button-wrapper>
