@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BookingPageComponent } from './pages/booking-page/booking-page.component';
 import { HeaderSectionComponent } from './components/sections/header-section/header-section.component';
+import { ButtonWrapperComponent } from './components/buttons/button-wrapper/button-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HeaderSectionComponent } from './components/sections/header-section/hea
     HomePageComponent,
     BookingPageComponent,
     HeaderSectionComponent,
+    ButtonWrapperComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -1,23 +1,32 @@
-<header class="">
-  <picture class='absolute w-full h-0 pb-[46.75rem] md:pb-[62rem] xl:pb-[51.25rem]'>
+<header>
+  <picture
+    class='absolute w-full top-0 left-0 h-0 pb-[46.75rem] md:pb-[62rem] xl:pb-[51.25rem]'>
     <source media="(min-width: 74rem)"
       srcset="assets/homepage/hero-bg-desktop.jpg 1x, assets/homepage/hero-bg-desktop@2x.jpg 2x" />
     <source media="(min-width: 45rem)"
       srcset="assets/homepage/hero-bg-tablet.jpg 1x, assets/homepage/hero-bg-tablet@2x.jpg 2x" />
-    <img class="absolute w-full top-0 left-0 h-full  object-cover object-left-top"
+    <img class="absolute w-full top-0 left-0 h-full  object-cover object-center "
       srcset="assets/homepage/hero-bg-mobile.jpg 1x, assets/homepage/hero-bg-mobile@2x.jpg 2x"
       alt="">
   </picture>
-
-  <div class="relative z-10 container text-neutral-50 text-center">
-    <div class="flex justify-center md:justify-start">
+  <div
+    class="relative z-20 container text-neutral-50 text-center mt-[14.5rem] md:mt-[23.375rem] xl:mt-[4.0625rem] xl:text-left">
+    <div class="flex justify-center xl:justify-start">
       <a routerLink="/" aria-label="Homepage" class="w-[5.125rem] md:w-[6.4375rem]">
         <img src="/assets/logo.svg" alt="">
       </a>
     </div>
-    <h1 class="heading-xl">Exquisite dining since 1989</h1>
-    <p class='body-xl'>Experience our seasonal menu in beautiful country surroundings. Eat
-      the freshest
-      produce from the comfort of our farmhouse.</p>
+    <h1 class="heading-xl mt-9 xl:mt-[9.5625rem] ">Exquisite dining <br /> since 1989</h1>
+    <p
+      class='body-xl mt-5 max-w-[35.8125rem] mx-auto xl:mt-2.5 xl:mx-0 xl:max-w-[27.8125rem]'>
+      Experience our seasonal menu in
+      beautiful country surroundings. Eat the freshest produce from the comfort of our
+      farmhouse.</p>
+    <div
+      class="mt-14 grid grid-cols-[15.3125rem] justify-center xl:mt-10 xl:justify-start">
+      <app-button-wrapper type="dark">
+        <a routerLink="/booking">BOOK A TABLE</a>
+      </app-button-wrapper>
+    </div>
   </div>
 </header>
