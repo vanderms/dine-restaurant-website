@@ -1,0 +1,21 @@
+<article>
+  <picture>
+    <source media="(min-width: 74rem)" [srcset]="getSrcset('desktop')">
+    <source media="(min-width: 45rem)" [srcset]="getSrcset('tablet')">
+    <img alt="" [srcset]="getSrcset('mobile')"
+      class="w-full h-[25rem] object-cover object-center shadow-card-xl">
+  </picture>
+  <div>
+    <header class="mt-12 text-center text-neutral-500">
+      <div class="flex justify-center">
+        <img src="/assets/patterns/pattern-divide.svg" alt="">
+      </div>
+      <div class="mt-9 heading-md">
+        <ng-content select="[title]"></ng-content>
+      </div>
+      <div class="mt-3 body-xl">
+        <ng-content></ng-content>
+      </div>
+    </header>
+  </div>
+</article>

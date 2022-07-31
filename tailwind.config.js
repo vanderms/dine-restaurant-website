@@ -19,7 +19,11 @@ module.exports = {
       "danger": "var(--clr-danger)",
       "transparent": "transparent"
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        "card-xl": "0px 75px 100px -50px rgba(56, 66, 85, 0.503223)"
+      }
+    },
   },
   plugins: [],
 }

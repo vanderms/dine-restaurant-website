@@ -7,6 +7,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BookingPageComponent } from './pages/booking-page/booking-page.component';
 import { HeaderSectionComponent } from './components/sections/header-section/header-section.component';
 import { ButtonWrapperComponent } from './components/buttons/button-wrapper/button-wrapper.component';
+import { FeaturesSectionComponent } from './components/sections/features-section/features-section.component';
+import { FeatureCardComponent } from './components/cards/feature-card/feature-card.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { ButtonWrapperComponent } from './components/buttons/button-wrapper/butt
     BookingPageComponent,
     HeaderSectionComponent,
     ButtonWrapperComponent,
+    FeaturesSectionComponent,
+    FeatureCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
