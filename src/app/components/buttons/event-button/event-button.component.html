@@ -1,0 +1,10 @@
+<div class="relative flex flex-col items-center xl:flex-row-reverse gap-8">
+  <button (click)="handleClick()"
+    class="text-[1.0625rem] leading-[1.75rem] tracking-[2.5px] font-semibold text-[#4C4C4C]      
+    "
+    [ngClass]="{'opacity-50': !active}">
+    <ng-content></ng-content>
+  </button>
+  <div class="absolute bottom-0 w-12 h-0 border-b xl:static xl:w-[5.9375rem]"
+    [ngClass]=" active ? 'border-primary': 'border-transparent'"></div>
+</div>

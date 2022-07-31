@@ -14,6 +14,7 @@ import { EventsSectionComponent } from './components/sections/events-section/eve
 import { CallToActionSectionComponent } from './components/sections/call-to-action-section/call-to-action-section.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { MenuCardComponent } from './components/cards/menu-card/menu-card.component';
+import { EventButtonComponent } from './components/buttons/event-button/event-button.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MenuCardComponent } from './components/cards/menu-card/menu-card.compon
     CallToActionSectionComponent,
     FooterComponent,
     MenuCardComponent,
+    EventButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
