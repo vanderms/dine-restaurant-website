@@ -11,6 +11,10 @@
     font-style: normal;
   }
 
+  main {
+    min-height: 100vh;
+  }
+
   :root {
     --clr-primary: #9e7f66;
     --clr-neutral-800: #111111;

@@ -1,0 +1,30 @@
+<header>
+  <div class="container relative z-10 text-neutral-50">
+    <div class="mt-14 flex justify-center md:justify-start xl:mt-[4.0625rem]">
+      <a routerLink="/" class="w-[5.125rem]">
+        <img src="/assets/logo.svg" alt="">
+      </a>
+    </div>
+    <div class="mt-11 text-center max-w-[35.8125rem] mx-auto md:mt-[4.375rem] 
+        xl:max-w-[27.8125rem] xl:text-left xl:mx-0 xl:mt-[9.5625rem]">
+      <h1 class="heading-xl ">Reservations</h1>
+      <p class="mt-4 body-xl">We can&apos;t wait to host you. If you have any special
+        requirements please feel
+        free to call on the phone number below. We&apos;ll be happy to accommodate you.
+      </p>
+      <div class="xl:hidden">
+        <app-button-wrapper type="transparent">
+          <a routerLink="/booking" fragment="reserve"
+            class="w-[15.3125rem] mx-auto mt-5">RESERVE PLACE</a>
+        </app-button-wrapper>
+      </div>
+
+    </div>
+  </div>
+  <picture>
+    <source media="(min-width: 74rem)" [srcset]="getSrcset('desktop')">
+    <source media="(min-width: 45rem)" [srcset]="getSrcset('tablet')">
+    <img alt="" [srcset]="getSrcset('mobile')"
+      class="absolute w-full h-[37.5rem] object-cover object-center top-0 left-0">
+  </picture>
+</header>

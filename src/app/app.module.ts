@@ -15,6 +15,8 @@ import { CallToActionSectionComponent } from './components/sections/call-to-acti
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { MenuCardComponent } from './components/cards/menu-card/menu-card.component';
 import { EventButtonComponent } from './components/buttons/event-button/event-button.component';
+import { BookingHeaderSectionComponent } from './components/sections/booking-header-section/booking-header-section.component';
+import { BookingSectionComponent } from './components/sections/booking-section/booking-section.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { EventButtonComponent } from './components/buttons/event-button/event-bu
     FooterComponent,
     MenuCardComponent,
     EventButtonComponent,
+    BookingHeaderSectionComponent,
+    BookingSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
