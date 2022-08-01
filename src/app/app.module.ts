@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BookingPageComponent } from './pages/booking-page/booking-page.component';
@@ -17,6 +18,7 @@ import { MenuCardComponent } from './components/cards/menu-card/menu-card.compon
 import { EventButtonComponent } from './components/buttons/event-button/event-button.component';
 import { BookingHeaderSectionComponent } from './components/sections/booking-header-section/booking-header-section.component';
 import { BookingSectionComponent } from './components/sections/booking-section/booking-section.component';
+import { BookingFormComponent } from './components/forms/booking-form/booking-form.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,9 @@ import { BookingSectionComponent } from './components/sections/booking-section/b
     EventButtonComponent,
     BookingHeaderSectionComponent,
     BookingSectionComponent,
+    BookingFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

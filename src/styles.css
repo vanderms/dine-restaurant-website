@@ -151,3 +151,57 @@
     background-image: url("assets/patterns/pattern-curve-bottom-right.svg");
   }
 }
+
+@layer components {
+  .booking-form-input {
+    @apply w-full h-11 border-b;
+    border-color: #8e8e8e;
+    padding: 0 1rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: theme(colors.neutral-800);
+  }
+
+  .booking-form-input.ng-invalid.ng-touched {
+    border-color: theme(colors.danger);
+    color: theme(colors.danger);
+  }
+
+  .booking-form-input.ng-invalid.ng-touched::placeholder {
+    color: theme(colors.danger);
+  }
+
+  .booking-form-input[type="submit"] {
+    padding: 0;
+  }
+
+  .booking-form-input[type="number"] {
+    appearance: textfield;
+  }
+
+  select.booking-form-input {
+    background-color: transparent;
+  }
+
+  .booking-form-legend {
+    color: theme(colors.neutral-800);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .booking-form-people {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: theme(colors.neutral-800);
+  }
+
+  input[type="number"].booking-form-people {
+    @apply w-5;
+    appearance: textfield;
+  }
+
+  .booking-form-error-message {
+    font-size: 0.75rem;
+    color: theme(colors.danger);
+  }
+}

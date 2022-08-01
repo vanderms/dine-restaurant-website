@@ -1,1 +1,7 @@
-<p>booking-section works!</p>
+<section [attr.aria-labelledby]="titleId" class="relative z-10 mt-[5.6875rem] pb-[5.375rem]">
+  <div class="container">
+    <h2 [id]="titleId" class="sr-only">Make a Reservation</h2>
+    <app-booking-form></app-booking-form>
+  </div>
+
+</section>

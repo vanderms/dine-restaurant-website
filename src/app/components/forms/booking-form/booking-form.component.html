@@ -1,0 +1,120 @@
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit($event)" class="bg-neutral-50 p-8 flex flex-col gap-8
+shadow-card-xl
+">
+  <label>
+    <span class="sr-only">Name:</span>
+    <input type="text" class="booking-form-input" formControlName="name"
+      placeholder="Name">
+    <span>
+
+    </span>
+    <span *ngIf="isNameNotFilled()" class="booking-form-error-message">
+      Field is required
+    </span>
+  </label>
+  <label>
+    <span class="sr-only">Email:</span>
+    <input type="email" class="booking-form-input" formControlName="email"
+      placeholder="Email">
+    <span *ngIf="isEmailNotFilled()" class="booking-form-error-message">
+      Field is required
+    </span>
+    <span *ngIf="isValidEmail()" class="booking-form-error-message">
+      Invalid email
+    </span>
+  </label>
+  <fieldset>
+    <div class="grid grid-cols-1 gap-2">
+      <div>
+        <legend class="booking-form-legend">Pick a date:</legend>
+        <div *ngIf="isDateIncomplete()" class="booking-form-error-message">
+          Field is incomplete
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[73fr,73fr,88fr] gap-4">
+        <label>
+          <span class="sr-only">Month:</span>
+          <input type="number" class="booking-form-input" formControlName="month"
+            placeholder="MM">
+        </label>
+        <label>
+          <span class="sr-only">day:</span>
+          <input type="number" class="booking-form-input" formControlName="day"
+            placeholder="DD">
+        </label>
+        <label>
+          <span class="sr-only">Year:</span>
+          <input type="number" class="booking-form-input" formControlName="year"
+            placeholder="YYYY">
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div class="grid grid-cols-1 gap-2">
+      <div>
+        <legend class="booking-form-legend">Pick a time:</legend>
+        <div *ngIf="isTimeIncomplete()" class="booking-form-error-message">
+          Field is incomplete
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[73fr,73fr,88fr] gap-4">
+        <label>
+          <span class="sr-only">Hour:</span>
+          <input type="number" class="booking-form-input" formControlName="hour"
+            placeholder="09">
+        </label>
+        <label>
+          <span class="sr-only">Minutes:</span>
+          <input type="number" class="booking-form-input" formControlName="minutes"
+            placeholder="00">
+        </label>
+        <label>
+          <span class="sr-only">Period:</span>
+          <select formControlName="period" id="" class="booking-form-input">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+
+  <div>
+    <div class="flex justify-between items-center h-11 pb-4 border-b border-[#8e8e8e]">
+      <button type="button" aria-label="remove person" (click)="removePerson()"
+        class="w-4 h-4 grid place-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3">
+          <path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z" />
+        </svg>
+      </button>
+      <div class="w-[4.5rem] grid grid-cols-[1.5rem,1fr]">
+        <label>
+          <span class="sr-only">People:</span>
+          <input type="number" formControlName="people" class="booking-form-people">
+        </label>
+        <span class="booking-form-people">people</span>
+      </div>
+      <button type="button" aria-label="add person" (click)="addPerson()"
+        class="w-4 h-4 grid place-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11">
+          <path fill="#9E7F66"
+            d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z" />
+        </svg>
+      </button>
+    </div>
+    <div *ngIf="isPeopleNotFilled()" class="booking-form-error-message">
+      Field is required
+    </div>
+  </div>
+
+
+  <app-button-wrapper type="dark">
+    <input type="submit" value="MAKE RESERVATION" class="booking-form-input">
+  </app-button-wrapper>
+</form>
