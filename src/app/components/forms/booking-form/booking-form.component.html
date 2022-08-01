@@ -1,6 +1,5 @@
-<form [formGroup]="bookingForm" (ngSubmit)="onSubmit($event)" class="bg-neutral-50 p-8 flex flex-col gap-8
-shadow-card-xl
-">
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit($event)" class="bg-neutral-50 p-8 flex flex-col gap-8 shadow-card-xl max-w-[33.75rem] mx-auto 
+    md:p-12 xl:mx-0">
   <label>
     <span class="sr-only">Name:</span>
     <input type="text" class="booking-form-input" formControlName="name"
@@ -23,8 +22,9 @@ shadow-card-xl
       Invalid email
     </span>
   </label>
+
   <fieldset>
-    <div class="grid grid-cols-1 gap-2">
+    <div class="grid grid-cols-1 gap-2 md:grid-cols-[6.25rem,1fr] md:gap-14">
       <div>
         <legend class="booking-form-legend">Pick a date:</legend>
         <div *ngIf="isDateIncomplete()" class="booking-form-error-message">
@@ -35,18 +35,18 @@ shadow-card-xl
       <div class="grid grid-cols-[73fr,73fr,88fr] gap-4">
         <label>
           <span class="sr-only">Month:</span>
-          <input type="number" class="booking-form-input" formControlName="month"
-            placeholder="MM">
+          <input type="number" class="booking-form-input" formControlName="month" min="1"
+            max="12" placeholder="MM">
         </label>
         <label>
           <span class="sr-only">day:</span>
-          <input type="number" class="booking-form-input" formControlName="day"
-            placeholder="DD">
+          <input type="number" class="booking-form-input" formControlName="day" min="1"
+            max="31" placeholder="DD">
         </label>
         <label>
           <span class="sr-only">Year:</span>
           <input type="number" class="booking-form-input" formControlName="year"
-            placeholder="YYYY">
+            min="2022" max="2030" placeholder="YYYY">
         </label>
       </div>
 
@@ -54,7 +54,7 @@ shadow-card-xl
   </fieldset>
 
   <fieldset>
-    <div class="grid grid-cols-1 gap-2">
+    <div class="grid grid-cols-1 gap-2 md:grid-cols-[6.25rem,1fr] md:gap-14">
       <div>
         <legend class="booking-form-legend">Pick a time:</legend>
         <div *ngIf="isTimeIncomplete()" class="booking-form-error-message">
@@ -66,12 +66,12 @@ shadow-card-xl
         <label>
           <span class="sr-only">Hour:</span>
           <input type="number" class="booking-form-input" formControlName="hour"
-            placeholder="09">
+            placeholder="09" min="0" max="23">
         </label>
         <label>
           <span class="sr-only">Minutes:</span>
           <input type="number" class="booking-form-input" formControlName="minutes"
-            placeholder="00">
+            placeholder="00" min="0" max="59">
         </label>
         <label>
           <span class="sr-only">Period:</span>
